@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Poetry Quiz: Herbert, Blake, and Lawrence</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .quiz-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 15px;
+        }
+        .poem-context {
+            background-color: #f8f9fa;
+            border-left: 4px solid #95a5a6;
+            padding: 12px;
+            margin: 10px 0 15px 0;
+            font-style: italic;
+            font-family: Georgia, serif;
+            white-space: pre-line;
+        }
+        .question-block {
+            margin-bottom: 30px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        .question-text {
+            font-weight: 600;
+            font-size: 1.1em;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .option-item {
+            margin-bottom: 10px;
+        }
+        .option-label {
+            display: block;
+            padding: 10px 15px;
+            background: #f8f9fa;
+            border: 1px solid #dcdde1;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .option-label:hover {
+            background: #e1f5fe;
+            border-color: #b3e5fc;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        .btn-submit {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .btn-submit:hover {
+            background: #2980b9;
+        }
+        .result-box {
+            display: none;
+            margin-top: 25px;
+            padding: 20px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        .feedback {
+            margin-top: 10px;
+            padding: 12px;
+            border-radius: 4px;
+            display: none;
+            font-size: 0.95em;
+        }
+        .correct {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h1>Literature Quiz: Metaphysical, Romantic & Modern Poetry</h1>
+    <form id="quizForm">
+
+        <!-- --- GEORGE HERBERT (EASTER WINGS) --- -->
+        <!-- Question 1 (Target: B) -->
+        <div class="question-block">
+            <div class="question-text">1. George Herbert’s poetry collection, <em>The Temple</em> (1633), in which "Easter Wings" is included, is distinctively structured. Which of the following best describes the structural principle behind the arrangement of the poems in this collection?</div>
+            <ul class="options">
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q1" value="A"> A) It is strictly organized in chronological order of the ecclesiastical calendar, starting from Advent to Trinity Sunday.</label>
+                </li>
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q1" value="B"> B) It mimics the physical architecture of a church building and the spiritual movement of a worshiper entering it.</label>
+                </li>
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q1" value="C"> C) It follows the classic structure of an epic narrative, depicting the fall and redemption of Lucifer.</label>
+                </li>
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q1" value="D"> D) It is arranged based on the secular social ranks of the English court during the reign of King Charles I.</label>
+                </li>
+            </ul>
+            <div class="feedback" id="ans-q1"></div>
+        </div>
+
+        <!-- Question 2 (Target: C) -->
+        <div class="question-block">
+            <div class="question-text">2. As a Metaphysical poet, George Herbert is widely celebrated for his unique treatment of sacred themes. Which biographical or artistic aspect is true regarding Herbert's <em>The Temple</em>?</div>
+            <ul class="options">
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q2" value="A"> A) Herbert wrote these poems to open a political debate within the Parliament regarding the divine right of kings.</label>
+                </li>
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q2" value="B"> B) The collection serves as an allegorical commentary criticizing the rise of experimental science and the Royal Society.</label>
+                </li>
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q2" value="C"> C) The poems reflect his deep devotion as an Anglican country parson, balancing complex intellectual conceits with profound spiritual humility.</label>
+                </li>
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q2" value="D"> D) He rejected pattern poetry and strictly avoided typography that visually reinforced the theme of his works.</label>
+                </li>
+            </ul>
+            <div class="feedback" id="ans-q2"></div>
+        </div>
+
+
+        <!-- --- WILLIAM BLAKE (THE TYGER & THE LAMB) --- -->
+        <!-- Question 3 (Target: D) -->
+        <div class="question-block">
+            <div class="question-text">3. In William Blake's "The Tyger," the creator is metaphorically framed not as a gentle gardener, but as an artisan working in a heavy industrial workspace. Which specific metaphor is heavily utilized in the poem to evoke this terrifying creative energy?</div>
+            <div class="poem-context">"What the hammer? what the chain?
+In what furnace was thy brain?
+What the anvil? what dread grasp
+Dare its deadly terrors clasp?"</div>
+            <ul class="options">
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q3" value="A"> A) A nautical navigation metaphor linked to early modern exploration.</label>
+                </li>
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q3" value="B"> B) An astronomical observatory metaphor measuring cosmic distances.</label>
+                </li>
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q3" value="C"> C) An agricultural harvest metaphor celebrating seasonal fertility.</label>
+                </li>
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q3" value="D"> D) A blacksmith’s forge and industrial furnace metaphor.</label>
+                </li>
+            </ul>
+            <div class="feedback" id="ans-q3"></div>
+        </div>
+
+        <!-- Question 4 (Target: D) -->
+        <div class="question-block">
+            <div class="question-text">4. Read the opening lines of William Blake's "The Tyger." What is the dominant poetic meter used here that creates the heavy, driving, and ominous rhythm of the poem?</div>
+            <div class="poem-context">"Tyger! Tyger! burning bright
+In the forests of the night,"</div>
+            <ul class="options">
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q4" value="A"> A) Iambic Pentameter</label>
+                </li>
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q4" value="B"> B) Dactylic Hexameter</label>
+                </li>
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q4" value="C"> C) Anapestic Tetrameter</label>
+                </li>
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q4" value="D"> D) Trochaic Tetrameter</label>
+                </li>
+            </ul>
+            <div class="feedback" id="ans-q4"></div>
+        </div>
+
+        <!-- Question 5 (Target: A) -->
+        <div class="question-block">
+            <div class="question-text">5. In William Blake's "The Lamb," the speaker establishes an intimate, tripartite mimicry or identification. Who are the three entities that share the same identity or name in the poem?</div>
+            <div class="poem-context">"He is called by thy name,
+For he calls himself a Lamb:
+He is meek & he is mild,
+He became a little child:
+I a child & thou a lamb,
+We are called by his name."</div>
+            <ul class="options">
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q5" value="A"> A) The Speaker (a child), the Lamb (the animal), and Christ (God)</label>
+                </li>
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q5" value="B"> B) The Piper, the Tyger, and the Angel</label>
+                </li>
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q5" value="C"> C) The Priest, the King, and the Soldier</label>
+                </li>
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q5" value="D"> D) The Father, the Mother, and the Infant</label>
+                </li>
+            </ul>
+            <div class="feedback" id="ans-q5"></div>
+        </div>
+
+        <!-- Question 6 (Target: C) -->
+        <div class="question-block">
+            <div class="question-text">6. Who is the speaker of William Blake's "The Lamb," and what state of human existence does this voice fundamentally represent within Blake's poetic philosophy?</div>
+            <ul class="options">
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q6" value="A"> A) An aged cynic representing the state of disillusioned Experience.</label>
+                </li>
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q6" value="B"> B) A natural philosopher representing the state of scientific Reason.</label>
+                </li>
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q6" value="C"> C) A young child representing the pure, uncorrupted state of Innocence.</label>
+                </li>
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q6" value="D"> D) An angry political rebel representing social revolution.</label>
+                </li>
+            </ul>
+            <div class="feedback" id="ans-q6"></div>
+        </div>
+
+
+        <!-- --- D.H. LAWRENCE (SNAKE) --- -->
+        <!-- Question 7 (Target: C) -->
+        <div class="question-block">
+            <div class="question-text">7. In D.H. Lawrence's poem "Snake," fill in the blanks with the correct words that reflect the speaker's emotional progression: first feeling privileged to offer _________ to the creature, but later deeply regretting his action as an expression of human _________.</div>
+            <div class="poem-context">"But even so, honoured still more
+That he should seek my _________
+...
+And I have something to expiate;
+A _________."</div>
+            <ul class="options">
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q7" value="A"> A) hostility / bravery</label>
+                </li>
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q7" value="B"> B) hostility / pettiness</label>
+                </li>
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q7" value="C"> C) hospitality / pettiness</label>
+                </li>
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q7" value="D"> D) hospitality / cowardice</label>
+                </li>
+            </ul>
+            <div class="feedback" id="ans-q7"></div>
+        </div>
+
+        <!-- Question 8 (Target: B) -->
+        <div class="question-block">
+            <div class="question-text">8. Why does the speaker in Lawrence's "Snake" immediately feel profound shame and regret after throwing a clumsy log at the water-trough?</div>
+            <ul class="options">
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q8" value="A"> A) He realized he broke the property laws of Sicily by damaging the public trough.</label>
+                </li>
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q8" value="B"> B) He realized he succumbed to the vulgar, artificial voices of his "accursed human education" instead of honoring a majestic "lord of life."</label>
+                </li>
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q8" value="C"> C) He was terrified that the snake would turn back and inflict a fatal venomous bite on him.</label>
+                </li>
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q8" value="D"> D) He felt guilty because he missed his chance to capture the snake and sell it to a laboratory.</label>
+                </li>
+            </ul>
+            <div class="feedback" id="ans-q8"></div>
+        </div>
+
+        <!-- Question 9 (Target: D) -->
+        <div class="question-block">
+            <div class="question-text">9. In "Snake," Lawrence explicitly invokes a literary allusion to highlight the sin of violating the sacred bond between humans and the natural world. Which creature from Romantic poetry is mentioned?</div>
+            <div class="poem-context">"And I thought of the _________
+And I wished he would come back, my snake."</div>
+            <ul class="options">
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q9" value="A"> A) Tyger</label>
+                </li>
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q9" value="B"> B) Nightingale</label>
+                </li>
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q9" value="C"> C) Raven</label>
+                </li>
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q9" value="D"> D) Albatross</label>
+                </li>
+            </ul>
+            <div class="feedback" id="ans-q9"></div>
+        </div>
+
+        <!-- Question 10 (Target: A) -->
+        <div class="question-block">
+            <div class="question-text">10. Across the poems of William Blake and D.H. Lawrence provided in the text, how are predatory or non-human creatures like the Tyger and the Snake fundamentally characterized?</div>
+            <ul class="options">
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q10" value="A"> A) As expressions of a sublime, primal, and elemental power that challenges conventional human morality and rigid educational boundaries.</label>
+                </li>
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q10" value="B"> B) As purely evil monsters that humans must conquer and tame through technology and science.</label>
+                </li>
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q10" value="C"> C) As allegorical caricatures designed to mock the political leaders of England during their respective times.</label>
+                </li>
+                <li class="option-item">
+                    <label class="option-label"><input type="radio" name="q10" value="D"> D) As cute, domesticated companions meant to highlight the warmth of rural English life.</label>
+                </li>
+            </ul>
+            <div class="feedback" id="ans-q10"></div>
+        </div>
+
+        <button type="button" class="btn-submit" onclick="gradeQuiz()">Submit Answers</button>
+    </form>
+
+    <div class="result-box" id="resultBox"></div>
+</div>
+
+<script>
+    const answers = {
+        q1: "B",
+        q2: "C",
+        q3: "D",
+        q4: "D",
+        q5: "A",
+        q6: "C",
+        q7: "C",
+        q8: "B",
+        q9: "D",
+        q10: "A"
+    };
+
+    function gradeQuiz() {
+        let score = 0;
+        const total = Object.keys(answers).length;
+        
+        for (let q in answers) {
+            const selected = document.querySelector(`input[name="${q}"]:checked`);
+            const feedbackBox = document.getElementById(`ans-${q}`);
+            
+            feedbackBox.style.display = "block";
+            
+            if (selected && selected.value === answers[q]) {
+                score++;
+                feedbackBox.className = "feedback correct";
+                feedbackBox.innerHTML = `<strong>Correct!</strong>`;
+            } else {
+                feedbackBox.className = "feedback incorrect";
+                feedbackBox.innerHTML = `<strong>Incorrect.</strong>`;
+            }
+        }
+        
+        const resultBox = document.getElementById("resultBox");
+        resultBox.style.display = "block";
+        resultBox.style.backgroundColor = score === total ? "#d4edda" : "#e2e3e5";
+        resultBox.style.color = score === total ? "#155724" : "#383d41";
+        resultBox.innerHTML = `You scored ${score} out of ${total}!`;
+        
+        window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
+    }
+</script>
+
+</body>
+</html>
